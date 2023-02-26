@@ -1,11 +1,12 @@
 {
   "name": "@ze-ts/async-pipe",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Async pipe for functional programming, works with \"normal\" functions, promises and async functions.",
   "repository": {
     "type": "git",
     "url": "https://github.com/iagobelo/ze-ts"
   },
+  "private": false,
   "source": "src/index.ts",
   "main": "dist/main.js",
   "module": "dist/module.js",
