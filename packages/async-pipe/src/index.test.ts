@@ -1,4 +1,4 @@
-import { pipeAsync } from './index';
+import pipeAsync from './index';
 
 describe('pipeAsync', () => {
   it('should work with promises', async () => {
