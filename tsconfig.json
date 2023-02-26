@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "forceConsistentCasingInFileNames": true,
+    "target": "ESNext",
+    "types": ["jest"],
+    "moduleResolution": "nodenext"
+  },
+  "exclude": ["**/node_modules", "**/test", "**/dist", "**/test.ts"]
+}
