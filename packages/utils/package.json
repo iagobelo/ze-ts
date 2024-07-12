@@ -1,7 +1,7 @@
 {
   "name": "@ze-ts/utils",
   "version": "0.1.0",
-  "description": "Async pipe",
+  "description": "Utils",
   "source": "src/index.ts",
   "main": "dist/main.js",
   "module": "dist/module.js",

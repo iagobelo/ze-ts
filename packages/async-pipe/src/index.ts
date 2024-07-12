@@ -18,19 +18,16 @@ type UnknownFn = Fn<unknown, unknown>;
  * If the last function returns a promise, the result will
  * be the type of the promise.
  * @example
- * pipeAsync(1, (v) => v + 1, (v) => v + 2, (v) => Promise.resolve(v + 3))
- * // will return a Promise<number> with the value 7
+ * pipeAsync(1, (v) => v + 1, (v) => v + 2, (v) => Promise.resolve(v + 3)) // will return a Promise<number> with the value 7
  * @example
- * pipeAsync(1, (v) => v + 1, (v) => v + 2, (v) => v + 3)
- * // will return a number with the value 6
+ * pipeAsync(1, (v) => v + 1, (v) => v + 2, (v) => v + 3) // will return a number with the value 6
  */
 type AsyncPipeResultType<T extends unknown[]> = T extends [
   infer C,
   ...infer Rest
 ]
   ? C extends Promise<unknown>
-    ? // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      Promise<Rest extends [...infer A, infer LastType] ? LastType : never>
+    ? Promise<Rest extends [...infer A, infer LastType] ? LastType : never>
     : Rest extends [infer A]
     ? A
     : AsyncPipeResultType<Rest>
@@ -45,8 +42,7 @@ interface PipeAsyncThis {
  * It takes a value and a list of functions and returns
  * the result of the composition of the functions.
  * @example
- * pipeAsync(1, (v) => v + 1, (v) => v + 2, (v) => v + 3)
- * // will return a number with the value 6
+ * pipeAsync(1, (v) => v + 1, (v) => v + 2, (v) => v + 3) // 7
  */
 // prettier-ignore
 interface PipeAsync extends PipeAsyncThis {
