@@ -1,6 +1,6 @@
 {
   "name": "ze-ts",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "prettier": "^2.8.4",
     "turbo": "^2.0.6",
-    "typescript": "^4.9.5"
+    "typescript": "^5.5.3"
   },
   "packageManager": "npm@7.0.0",
   "workspaces": [
