@@ -7,8 +7,7 @@
     "build:all": "turbo build --cache-dir .turbo-cache",
     "test:all": "turbo test --cache-dir .turbo-cache",
     "release:all": "turbo release --cache-dir .turbo-cache --concurrency=1",
-    "publish": "turbo publish --cache-dir .turbo-cache",
-    "prepare": "husky install"
+    "publish": "turbo publish --cache-dir .turbo-cache"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +26,6 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "husky": "^9.0.11",
     "prettier": "^2.8.4",
     "turbo": "^2.0.6",
     "typescript": "^5.5.3"
