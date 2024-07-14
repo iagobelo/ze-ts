@@ -11,9 +11,6 @@
     },
     "release": {
       "dependsOn": ["^release"]
-    },
-    "publish": {
-      "dependsOn": ["^publish", "release", "test"]
     }
   }
 }
