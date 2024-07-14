@@ -1,6 +1,6 @@
 {
   "name": "@ze-ts/config-release-it",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Shared configuration file for release-it.",
   "repository": {
     "type": "git",
