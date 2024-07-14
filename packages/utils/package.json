@@ -7,7 +7,6 @@
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
   "scripts": {
-    "test": "jest --coverage",
     "build": "parcel build ./src/index.ts"
   },
   "author": "Iago Belo",
