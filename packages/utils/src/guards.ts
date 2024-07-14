@@ -11,5 +11,5 @@ export const isPromise = (value: any): value is Promise<unknown> =>
  * @param value - function to check.
  * @returns true if fn is a function.
  */
-export const isFunction = (value: any): value is (a: any) => any =>
+export const isFunction = (value: any): value is (a: unknown) => unknown =>
   Boolean(value) && typeof value === 'function';
