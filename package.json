@@ -6,8 +6,7 @@
   "scripts": {
     "build:all": "turbo build --cache-dir .turbo-cache",
     "test:all": "turbo test --cache-dir .turbo-cache",
-    "release:all": "turbo release --cache-dir .turbo-cache --concurrency=1",
-    "publish": "turbo publish --cache-dir .turbo-cache"
+    "publish-packages": "turbo run build test && changeset version && changeset publish"
   },
   "keywords": [],
   "author": "",
