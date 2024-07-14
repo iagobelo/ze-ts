@@ -1,1 +1,1 @@
-module.exports = require('@mono/config-release-it');
+module.exports = require('@ze-ts/config-release-it');
