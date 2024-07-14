@@ -19,7 +19,7 @@ module.exports = {
     pushRepo: 'git@github.com:iagobelo/ze-ts.git',
     commitsPath: '.',
     commitMessage: `feat(${scope}): released version v${version} [no ci]`,
-    requireCommits: true,
+    requireCommits: false,
     requireCommitsFail: false,
   },
   npm: {
@@ -31,6 +31,6 @@ module.exports = {
     releaseName: `${packageName}-v${version}`,
   },
   hooks: {
-    'before:git:release': ['mvm-update', 'git add --all'],
+    'before:git:release': ['git add --all'],
   },
 };
