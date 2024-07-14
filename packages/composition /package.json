@@ -17,7 +17,7 @@
   "scripts": {
     "test": "jest",
     "build": "parcel build ./src/index.ts",
-    "prepublishOnly": "pnpm run test && pnpm run build"
+    "release": "release-it --ci"
   },
   "author": {
     "name": "Iago Belo",
@@ -31,7 +31,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@ze-ts/utils": "*"
+    "@ze-ts/utils": "*",
+    "@ze-ts/config-release-it": "*"
   },
   "devDependencies": {
     "jest": "^29.7.0",

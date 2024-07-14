@@ -1,0 +1,23 @@
+{
+  "name": "@ze-ts/config-release-it",
+  "version": "0.0.0",
+  "description": "Shared configuration file for release-it.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iagobelo/ze-ts"
+  },
+  "private": true,
+  "main": "./release-it.js",
+  "author": {
+    "name": "Iago Belo",
+    "email": "iagobelo.oliveira@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "release": "release-it --ci"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "5.1.1",
+    "release-it": "15.10.1"
+  }
+}

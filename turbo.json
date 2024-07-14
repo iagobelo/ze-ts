@@ -8,6 +8,12 @@
     "test": {
       "dependsOn": ["^build"],
       "inputs": ["**/src/**/*.ts"]
+    },
+    "release": {
+      "dependsOn": ["^release"]
+    },
+    "publish": {
+      "dependsOn": ["^publish", "release", "test"]
     }
   }
 }
