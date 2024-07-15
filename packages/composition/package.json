@@ -1,6 +1,6 @@
 {
   "name": "@ze-ts/composition",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A set of functions to compose functions in a functional way.",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "parcel build ./src/index.ts",
+    "build": "parcel build",
     "release": "release-it --ci"
   },
   "author": {
@@ -24,7 +24,6 @@
     "email": "iagobelo.oliveira@gmail.com"
   },
   "keywords": [
-    "async",
     "pipe",
     "functional",
     "typescript"
