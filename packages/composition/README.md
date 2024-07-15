@@ -1,6 +1,6 @@
 # @ze-ts/composition
 
-This package provides a set of utilities to help you compose your functions.
+This package provides a set of utilities to help you compose your functions in a more readable and functional way.
 
 ## Installation
 
@@ -70,5 +70,5 @@ const multiply = (a: number) => (b: number) => a * b;
 
 const addAndMultiply = compose(multiply(2), add(3));
 
-addAndMultiply(2, 3); // 8
+addAndMultiply(2); // 10
 ```
