@@ -1,4 +1,4 @@
-import { UnknownFn, Fn } from './types';
+import type { UnknownFn, Fn } from './types';
 import flow from './flow';
 
 // prettier-ignore
