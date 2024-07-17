@@ -1,0 +1,41 @@
+{
+  "name": "@ze-ts/promise",
+  "version": "0.1.0",
+  "description": "A set of functions to compose functions in a functional way.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iagobelo/ze-ts"
+  },
+  "private": false,
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "parcel build",
+    "release": "release-it --ci"
+  },
+  "author": {
+    "name": "Iago Belo",
+    "email": "iagobelo.oliveira@gmail.com"
+  },
+  "keywords": [
+    "pipe",
+    "functional",
+    "typescript"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@ze-ts/utils": "*",
+    "@ze-ts/composition": "*"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "parcel": "^2.12.0",
+    "ts-jest": "^29.2.2"
+  }
+}
