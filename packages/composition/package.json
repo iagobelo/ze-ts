@@ -30,8 +30,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@ze-ts/utils": "*",
-    "@ze-ts/config-release-it": "*"
+    "@ze-ts/utils": "*"
   },
   "devDependencies": {
     "jest": "^29.7.0",
