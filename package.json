@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:all": "turbo build --cache-dir .turbo-cache",
-    "test:all": "turbo test --cache-dir .turbo-cache",
+    "build:all": "turbo build",
+    "build:composition": "turbo run build --filter @ze-ts/composition",
+    "test:all": "turbo test",
+    "test:composition": "turbo run test --filter @ze-ts/composition",
     "publish-packages": "turbo run build test && changeset version && changeset publish"
   },
   "keywords": [],
