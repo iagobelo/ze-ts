@@ -6,8 +6,12 @@
   "scripts": {
     "build:all": "turbo build",
     "build:composition": "turbo run build --filter @ze-ts/composition",
+    "build:utils": "turbo run build --filter @ze-ts/utils",
+    "build:promise": "turbo run build --filter @ze-ts/promise",
     "test:all": "turbo test",
     "test:composition": "turbo run test --filter @ze-ts/composition",
+    "test:utils": "turbo run test --filter @ze-ts/utils",
+    "test:promise": "turbo run test --filter @ze-ts/promise",
     "publish-packages": "turbo run build test && changeset version && changeset publish"
   },
   "keywords": [],
@@ -31,7 +35,6 @@
   },
   "packageManager": "npm@7.0.0",
   "workspaces": [
-    "packages/*",
-    "shared/*"
+    "packages/*"
   ]
 }
