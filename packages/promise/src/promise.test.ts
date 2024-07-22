@@ -1,25 +1,20 @@
-import {
-  then,
-  pCatch,
-  tryCatch,
-  map,
-  catchAndResolve,
-  pFinally,
-} from './promise';
+import { then, map, otherwise, tryCatch } from './promise';
 
-describe('ZTSPromise', () => {
-  it('should resolve with the correct value', async () => {
+describe('Promise', () => {
+  it('then() - should resolve with the correct value', async () => {
     const result = await then((value: string) => Promise.resolve(value.length))(
       Promise.resolve('Hello, World!')
     );
 
-    expect(result).toBe('Hello, World!');
+    expect(result).toBe(13);
   });
 
-  it('pCatch() - should reject with the correct error', async () => {
-    const result = await pCatch((error: Error) =>
-      Promise.resolve(error.message)
-    )(Promise.reject(new Error('Something went wrong')));
+  it('then() - should reject with the correct error', async () => {
+    const result = await then((value: string) =>
+      Promise.reject(new Error(value))
+    )(Promise.resolve('Something went wrong')).catch(
+      (error: Error) => error.message
+    );
 
     expect(result).toBe('Something went wrong');
   });
@@ -29,12 +24,32 @@ describe('ZTSPromise', () => {
       Promise.resolve('Hello, World!')
     );
 
-    expect(result).toBe('Hello, World!');
+    expect(result).toBe(13);
   });
 
-  it('catchAndResolve() - should resolve with the correct value', async () => {
-    const result = await catchAndResolve((error: Error) => error.message)(
+  it('map() - should reject with the correct error', async () => {
+    const result = await map((value: string) => {
+      throw new Error(value);
+    })(Promise.resolve('Something went wrong')).catch(
+      (error: Error) => error.message
+    );
+
+    expect(result).toBe('Something went wrong');
+  });
+
+  it('otherwise() - should resolve with the correct value', async () => {
+    const result = await otherwise((error: Error) => error.message)(
       Promise.reject(new Error('Something went wrong'))
+    );
+
+    expect(result).toBe('Something went wrong');
+  });
+
+  it('otherwise() - should reject with the correct error', async () => {
+    const result = await otherwise((error: Error) => {
+      throw new Error(error.message);
+    })(Promise.reject(new Error('Something went wrong'))).catch(
+      (error: Error) => error.message
     );
 
     expect(result).toBe('Something went wrong');
@@ -42,8 +57,8 @@ describe('ZTSPromise', () => {
 
   it('tryCatch() - should resolve with the correct value', async () => {
     const result = await tryCatch(
-      (value: string) => value.length,
-      (error: Error) => error.message
+      (value: string) => Promise.resolve(value),
+      (error: Error) => Promise.resolve(error.message)
     )(Promise.resolve('Hello, World!'));
 
     expect(result).toBe('Hello, World!');
