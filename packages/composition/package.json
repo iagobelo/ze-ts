@@ -16,8 +16,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "parcel build",
-    "release": "release-it --ci"
+    "build": "parcel build"
   },
   "author": {
     "name": "Iago Belo",
